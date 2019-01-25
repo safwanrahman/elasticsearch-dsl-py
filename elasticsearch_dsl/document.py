@@ -76,7 +76,6 @@ class DocumentOptions(object):
         for name, value in list(iteritems(attrs)):
             if isinstance(value, Field):
                 self.mapping.field(name, value)
-                del attrs[name]
 
         # add all the mappings for meta fields
         for name in dir(meta):
